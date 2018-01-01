@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  points_per_mile: 1
+
+two:
+  type: 
+  points_per_mile: 1

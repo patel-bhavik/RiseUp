@@ -1,0 +1,25 @@
+
+	<div class="container">
+		<% if user_signed_in? %>
+      <%= link_to("Tasks","/tasks")%><br>
+      <%= link_to("Charity","/charities")%><br>
+      <%= link_to("Events","/events")%><br>
+      <%= link_to("Donations", "/donations") %>
+			<% if is_admin_or_superadmin %>
+				<h3>Admin/SuperAdmin : Links</h3>
+				<br><%= link_to("Create new member", "/admin/users/new") %><br>
+				<br><%= link_to("See all Members", "/admin/users") %><br>			
+			<% else %>
+h			<% end %>
+			<%= link_to "Profile", edit_user_registration_path %>
+			
+			<%= link_to('Sign Out', destroy_user_session_path, method: :delete) %> 
+		<% else %>		
+				<br><br><br>
+				<br><%= link_to('Sign In', new_user_session_path)  %>
+				<br><%= link_to("Sign Up", new_user_registration_path) %>
+		<% end %>
+	</div>
+
+</body>
+</html>

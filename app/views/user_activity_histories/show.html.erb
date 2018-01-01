@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Points earned:</strong>
+  <%= @user_activity_history.points_earned %>
+</p>
+
+<%= link_to 'Edit', edit_user_activity_history_path(@user_activity_history) %> |
+<%= link_to 'Back', user_activity_histories_path %>

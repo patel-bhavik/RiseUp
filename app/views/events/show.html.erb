@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @event.desc %>
+</p>
+
+<p>
+  <strong>Points needed:</strong>
+  <%= @event.points_needed %>
+</p>
+
+<p>
+  <!-- <strong>Event img:</strong> -->
+  <img width = "300px" height = "auto" src = <%= @event.event_img %></img>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

@@ -1,0 +1,37 @@
+<%= form_with(model: event, local: true) do |form| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :event_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desc %>
+    <%= form.text_area :desc, id: :event_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :points_needed %>
+    <%= form.number_field :points_needed, id: :event_points_needed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :event_img %>
+    <%= form.text_field :event_img, id: :event_event_img %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

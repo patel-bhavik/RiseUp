@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Activity Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Points earned</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_activity_histories.each do |user_activity_history| %>
+      <tr>
+        <td><%= user_activity_history.points_earned %></td>
+        <td><%= link_to 'Show', user_activity_history %></td>
+        <td><%= link_to 'Edit', edit_user_activity_history_path(user_activity_history) %></td>
+        <td><%= link_to 'Destroy', user_activity_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Activity History', new_user_activity_history_path %>
